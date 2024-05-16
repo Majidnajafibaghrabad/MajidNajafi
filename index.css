@@ -1,460 +1,654 @@
-.name{
-   position:relative;
-    margin-top:-250px;
-    margin-left:300px
-}
-.name{
-    style;
-    color:orange;
-    font-size:50px   
-}
-.comprehensive{
-    position:relative;
-    margin-left:300px;
-    
-    font-size: 20px;
+ *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 
 }
-.intro{
-    position:relative;
-    margin-left:300px;
+
+:root {
+       --color-primery: #7562e0;
+       --color-primery-variant: rgba(102, 0, 255, 0.2);
+       --color-white: #fff;
+       --color-light: #f5f5f5;
+       --color-black: #0f0f1b;
+       --color-dark: #4b4a53;
+
+       --container-width-lg: 82%;
+       --container-width-md: 90%;
+       --container-width-sm: 92%;
 }
 
-.gmail{
-    position:relative;
-    margin-left:320px;
-    margin-top:20px
+html {
+       scroll-behavior: smooth;
 }
-.gmail{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 3.5rem;
-    width: 3.5rem;
-    background-color: #495057;
-    color: #fff;
-    border-radius: 100%;
-    font-size: 1.5rem;
-    margin-right: 1.5rem;
+
+body {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 300;
+       color: var(--color-dark);
+       line-height: 1.7;
 }
-.skype{
-    position:relative;
-    left:20px;
-    margin-top:20px
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+color: var(--color-black);
 }
-.skype{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 3.5rem;
-    width: 3.5rem;
-    background-color: #495057;
-    color: #fff;
-    border-radius: 100%;
-    font-size: 1.5rem;
-    margin-right: 1.5rem;
+
+h1{
+       font-size: 4.4rem;
+       line-height: 1.1;
 }
+
+h2{
+       font-size: 2rem;
+}
+
+h3{
+       font-size: 1.6rem;
+}
+h4{
+       font-size: 1.4rem;
+}
+h5{
+       font-size: 1rem;
+}
+.lead {
+       width: 63%;
+       line-height: 1.5;
+       margin: 0 auto 3rem;
+}
+
+img{
+       width: 100%;
+       object-fit: cover;
+}
+
+.container {
+       width: var(--container-width-lg);
+       max-width: 1800px;
+       margin: 0 aoto;
+}
+
+section{
+      padding: 6rem 0; 
+      margin:5rem 0;
+}
+
+.btn {
+       background: var(--color-black);
+       color: var(--color-white);
+       display: inline-block;
+       width: fit-content;
+       padding: 0.8rem 1.6rem;
+       border: 1px solid transparent;
+       cursor: pointer;
+       transition: all 400ms ease;
+}
+
+.btn:hover{
+       background: var(--color-light);
+       color: var(--color-black);
+
+}
+
+.btn-primary{
+       background: var(--color-primery);
+       color: var(--color-white);
+}
+
+.btn-primary:hover{
+       border-color: var(--color-primery);
+       background: var(--color-light);
+       color: var(--color-primery);
+}
+
+.btn-lg{
+       padding: 1.1rem 2rem;
+       font-size: 1.2rem;
+}
+
+
+
+/* ***********NAVBAR ************ */
 
 nav{
-    position:fixed;
-    margin-top:0px;
-    margin-left:0px; 
-}
-nav{
-    background-color:rgb(128, 128, 128);
-}
-.navbar-nav{
-    font-size: 30px;
-    
+       width: 100vw;
+       height: 5rem;
+       display: grid;
+       place-items: center;
+       position: fixed;
+       z-index: 2;
+       background:var(--color-white) ;
 }
 
-.hr1{
-    position: relative;
-    margin-left: 300px;
-}
-.h2{
-    position:relative;
-    margin-left:300px;
-    margin-top:0px;
-}
-.Education{
-    position:relative;
-    margin-left:300px;
-    
-}
-.mb-0{
-    font-size: 30px;
+nav a {
+       color: var(--color-black);
+       font-size: 0.9rem;
+       transition: all 400ms ease;
 }
 
-.mb-3{
-    font-size:20px ;
-    color: blue;
+nav a:hover {
+       color: var(--color-primery);
 }
-.flex-shrink-0{
-    position:relative;
-    margin-left: 100px;
-    margin-top:-50px;
-    color:rgb(255, 0, 132)
+
+.nav__container {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
 }
-.GPA{
-    position:relative;
-    margin-left: 0px;
-    margin-top: 0px;
+
+/* **************باز و بسته کردن باتن برای موبایل و تبلت******** */
+
+nav button{
+       display: none;
 }
-.hr2{
-    position:relative;
-    margin-left: 300px;
-    margin-top: 400px;
+
+.nav__menu{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 4rem;
+
 }
-.Experience{
-    position:relative;
-    margin-left:300px;
-    
+
+/* ************header*********** */
+
+
+header{
+       height: calc(100vh - 5rem);
+       position: relative;
+       top: 5rem;
+       display: grid;
+       place-items: center;
+       overflow: hidden;
 }
-.EXP{
-    position:relative;
-    margin-left:0px;
-    
+
+.header__container{
+       display: grid;
+       grid-template-columns: 40% 60%;
+       height: 100%;
 }
-.Skills{
-    position:relative;
-    margin-left: 300px;
-    margin-top: 0px;
+
+.header__left {
+       display: flex;
+       align-items: center;
+       height: 100%;
+       z-index: 1;
 }
-.Ski2{
-    position:relative;
-    margin-left: 300px;
-    margin-top: -130px;
+
+.header__left h3{
+       color: var(--color-primery);
+       margin-bottom: 0.6rem;
+       color: #4a35c0;
 }
-.Research{
-    position:relative;
-    margin-left: 300px;
-    margin-top: 0px;
+
+.header__left p {
+      margin: 1.2rem 0 2rem;
 }
-.Rea2{
-    position:relative;
-    margin-left: 300px;
-    margin-top: -90px;
+
+.header__right{
+       position: relative;
+       height: 100%;
 }
-.Honors{
-    position:relative;
-    margin-left: 300px;
-    margin-top: 0px;
+
+.header__socials{
+       position: absolute;
+       right: 0;
+       bottom: 8rem;
+       display: flex;
+       flex-direction: column;
+       gap: 1.2rem;
+       font-size: 1.2rem;
 }
-.References{
-    position:relative;
-    margin-left: 300px;
-    margin-top: 0px;
+
+.header__socials a {
+       color: var(--color-white);
+       transition: all 400ms ease;
 }
-.Ref2{
-    position:relative;
-    margin-left: 300px;
-    margin-top: -175px;
+
+.header__socials a:hover {
+       color: var(--color-black);
 }
-.navbar-toggler{
-    position: fixed;
-    margin-left: 300px;
-    margin-top: -405px;
-    style;
-    width: 2340px;
-    height: 25px;
-    background-color: rgb(179, 255, 0);
-    border: none;
+
+.header__right-bg {
+       width: 70rem;
+       height: 70rem;
+       border-radius: 50%;
+       background: var(--color-primery);
+       position: absolute;
+       right: -30rem;
+       bottom: -30rem;
+       z-index: -1;
+}
+
+.header__image{
+       width: 82%;
+       max-width: 100%;
+       height: auto;
+       position: absolute;
+       bottom: -1rem;
+       z-index: 1;
+       
+      
+}
+
+/* education */
+@keyframes slideUp {
+       from {
+       transform: translateY(100%);
+       opacity: 0;
+       }
+       to {
+       transform: translateY(0);
+       opacity: 1;
+       }
+       }
+       
+       .education-section {
+       text-align: center;
+       margin: 20px;
+       
+       }
+       
+       .education-section h2 {
+       font-size: 2em;
+       text-decoration: underline;
+       margin-top: 130px;
+       color: var(--color-primery);
+       }
+       
+       .education-timeline {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       }
+       
+       .education-block {
+       background-color: #f3f3f3;
+       border-radius: 8px;
+       padding: 15px;
+       margin-bottom: 10px;
+       width: 80%;
+       animation: none
+       }
+       
+       .education-block h3 {
+       font-size: 1.5em;
+       color: #333;
+       }
+       
+       .education-block p {
+       font-size: 1em;
+       color: #666;
+       }
+       /* end of education */
+
+
+       .research-vehicles-section {
+              text-align: center;
+              margin: 40px 0;
+              }
+              
+              .research-vehicles-section h2 {
+              font-size: 2.5em;
+              color: #333;
+              margin-bottom: 20px;
+              color: var(--color-primery);
+              }
+              
+              .research-columns {
+              display: flex;
+              justify-content: center;
+              text-align: center;
+              margin: auto;
+              max-width: 1450px; /* میتوانید این عرض را بر اساس نیاز خود تنظیم کنید */
+              border: 2px solid var(--color-primery-variant); /* اضافه کردن کادر توسی رنگ */
+              background-color: var(--color-white)/* اضافه کردن رنگ پسزمینه توسی روشن */
+            
+              }
+              
+              .research-column {
+              margin: 0 10px;
+              }
+              
+              .research-list {
+              list-style: none;
+              padding: 0;
+              }
+              
+              .research-list li {
+              font-size: 1.2em;
+              color: #666;
+              margin-bottom: 10px;
+              animation: none;
+              }
+              
+
+              /* انیمیشن */
+              .active {
+                     animation: slideUp 0.30s ease-out forwards;
+                     }
+              /* ////////////// */
+               
+              .honors-awards-section {
+                     text-align: center;
+                     margin: 40px 0;
+                     }
+                     
+                     .honors-awards-section h2 {
+                     font-size: 2.5em;
+                     color: var(--color-primery);
+                     margin-bottom: 20px;
+                     }
+                     
+                     .honors-list {
+                            background-color: #f3f3f3;
+                            border-radius: 8px;
+                            padding: 15px;
+                            margin-bottom: 20px;
+                            width: 80%;
+                           
+                            list-style: none;
+                            margin-left: auto; /* اضافه کردن این خط */
+                            margin-right: auto; /* اضافه کردن این خط */
+                            }
+                     
+                     .honors-list li {
+                     font-size: 1.2em;
+                     color: #666;
+                     margin-bottom: 10px;
+                     
+                     }
+
+                     .slide-active {
+                            animation: slideIn 0.30s ease-out forwards;
+                            }
+                    
+                    
    
-}
-.navbar{
-    position: fixed;
-    margin-left:-10px;
-    margin-top: -20px;
-    style;
-    width: 300px;
-    height: 3000px;
-    background-color: rgb(179, 255, 0);
-    
-}
-.profile{
-    border-radius: 20% !important;
-}
-.nav-item{
-    display:flex;
-    style; 
-}
-.nav-link{
-    color: #495057;
-    text-decoration: none;
-}
-.nav-linkb{
-    position:relative;
-    margin-left:-40px;
-    margin-top: 0px;
-    color: #495057;
-    text-decoration: none;
-    style;
-    display:hidden;
-    width:100px ;height:35px;
-    text-decoration: transition:all 0.2s;
-}
+.technical-skills h2 {
+       text-align: center;
+       font-size: 2em;
+       margin-bottom: 10px;
+       color: var(--color-primery);
+       }
+       
+       .skills-container {
+       text-align: center;
+       margin: auto;
+       max-width: 1450px; /* میتوانید این عرض را بر اساس نیاز خود تنظیم کنید */
+       border: 2px solid var(--color-primery-variant); /* اضافه کردن کادر توسی رنگ */
+       background-color: var(--color-white)/* اضافه کردن رنگ پسزمینه توسی روشن */
+       
+       }
+       
+       .skills-container h3 {
+       font-size: 1.5em;
+       color: #333;
+       margin-top: 15px;
+       margin-bottom: 5px;
+       }
+       
+       .skills-container p {
+       font-size: 1em;
+       color: #666;
+       }
 
+       .project-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: auto;
+              }
 
+              .title-box h2 {
+                     color: var(--color-white);
+                     font-size: 2.5em; /* افزایش اندازه فونت */
+                     margin: 0;
+                     justify-content: center;
+                     align-items: center;
+               }
+              
+              .title-box {
+              background-color: var(--color-primery);
+              padding: 210px; 
+              margin-right: 30px;
+              width: 150px;
+              height: 10px;
+              max-width: 100%; 
+              display: flex;
+              justify-content: center;
+              align-items: center; 
+              border-radius: 15px; 
+              }
+              .slideshow-container {
+              max-width: 700px;
+              position: relative;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+              }
+              .mySlides {display: none;}
+              .fade {animation-name: fade; animation-duration: 1.5s;}
+              .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              padding: 16px;
+              margin-top: -22px;
+              color: white;
+              font-weight: bold;
+              font-size: 18px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+              user-select: none;
+              }
+              .next {right: 0; border-radius: 3px 0 0 3px;}
+              .prev:hover, .next:hover {background-color: rgba(0,0,0,0.8);}
+              @keyframes fade {from {opacity: .4} to {opacity: 1}}
+         
+              
+.image-container {
+       display: flex;
+       justify-content: center;
+       gap: 40px; /* فاصله بین تصاویر */
+       }
+       
+       .image-container img {
+       width: 300px; /* یا هر اندازهای که مد نظر دارید */
+       height: auto; /* برای حفظ نسبت تصاویر */
+       }
+.image-container {
+       display: flex;
+       justify-content: center;
+       gap: 40px; /* فاصله بین تصاویر */
+       }
+       
+       .image-container img {
+       width: 300px; /* یا هر اندازهای که مد نظر دارید */
+       height: auto; /* برای حفظ نسبت تصاویر */
+       }
+.video-container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: auto;
+       margin-top: 10px;
+       width: 300px;
+       max-width: 100%;
+       height: auto; 
+       }
+       
+       
+.main-container {
+       text-align: center; /* مرکز کردن متن */
+       }
+       
+       .main-title {
+       margin-bottom: 20px; /* فاصله بین تیتر اصلی و باکس */
+       }
+       
+       .experience-box {
+       background-color: #f2f2f2; /* رنگ پسزمینه باکس */
+       margin: auto; /* قرار دادن باکس در وسط */
+       padding: 20px; /* فاصله داخلی باکس */
+       width: 80%; /* عرض باکس */
+       border-radius: 10px; /* گردی گوشههای باکس */
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای باکس */
+       }
+       
+       .experience-box h2 {
+       text-align: left; /* چپچین کردن سرتیترها */
+       font-weight: bold; /* بولد کردن سرتیترها */
+       margin-top: 20px; /* فاصله بالای سرتیتر */
 
-.nav-link {
-    letter-spacing: 0;
-    
-}
-.nav-link:hover,
-.nav-link:active {
-  letter-spacing: 3px;
-}
-.nav-link:after,
-.nav-link:before {
-  backface-visibility: hidden;
-  border: 1px solid rgba(#ffffff, 0);
-  bottom: 0px;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-  width: 0;
-}
-.nav-link:hover:after,
-.nav-link:hover:before {
-  backface-visibility: hidden;
-  border-color: #fff;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-}
-.nav-link:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
-}
+       }
 
-.button button i ul{ 
-   opacity:0;
-   visibility:hidden;
-   
+       .main-container h2{
+              color: #7562e0;
+              margin-top: 50px;
+       }
+       
 
-}
-.button button i:hover ul{
-    opacity:1;
-    visibility:visible;
-    
-    
-}
-.button button i ul li:hover a{
-    background: rgb(0, 255, 217);
+       
+.experience-box h4 {
+       margin-top: 20px; /* فاصله بالای هر سرتیتر */
+       margin-bottom: 10px; /* فاصله پایین هر سرتیتر */
+       }
+       
+       .experience-box p {
+       margin-bottom: 20px; /* فاصله پایین هر پاراگراف */
+       }
 
-}
-a{
-    transition: 0.4s ease-in-out;
-}
-.navbar-collapse ul li:hover a{
-    background: rgb(0, 255, 217);
-}
-header .menu-icon{
-    display: none;
-}
-.bars{
-    position: relative;
-    display: none;  
-}
-.bars1 i ul{
-    position: relative;
-    margin-left: 1420px;
-    opacity: 0;
-    visibility: hidden;
-    
-}
-.bars1 ul{
-    opacity: 0;
-    visibility: hidden;
-}
+       
+/* اضافه کردن انیمیشن به باکس تجربه تحقیقاتی */
+/* .experience-box { 
+       opacity: 0;
+       transform: translateY(20px);
+       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+       will-change: opacity, transform;
+       }
+       
+       /* افکت اسلایدی هنگام اسکرول */
+       /* .experience-box.slide-in {
+       opacity: 1;
+       transform: translateY(0);
+       } */
 
+     
+       .main-container2 {
+              text-align: center; /* مرکز کردن متن */
+              }
+              
+              .main-title2 {
+              margin-bottom: 20px; /* فاصله بین تیتر اصلی و باکس */
+              }
+              
+              .experience-box2 {
+              background-color: #f2f2f2; /* رنگ پسزمینه باکس */
+              margin: auto; /* قرار دادن باکس در وسط */
+              padding: 20px; /* فاصله داخلی باکس */
+              width: 80%; /* عرض باکس */
+              border-radius: 10px; /* گردی گوشههای باکس */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای باکس */
+              }
+              
+              .experience-box2 h2 {
+              text-align: left; /* چپچین کردن سرتیترها */
+              font-weight: bold; /* بولد کردن سرتیترها */
+              margin-top: 20px; /* فاصله بالای سرتیتر */
+       
+              }
+       
+              .main-container2 h2{
+                     color: #7562e0;
+                     margin-top: 50px;
+              }
+              
+       
+              
+       .experience-box2 h4 {
+              margin-top: 20px; /* فاصله بالای هر سرتیتر */
+              margin-bottom: 10px; /* فاصله پایین هر سرتیتر */
+              }
+              
+              .experience-box2 p {
+              margin-bottom: 20px; /* فاصله پایین هر پاراگراف */
+              }
+       
+       
+  
+.container4 {
+       display: flex; /* استفاده از فلکس برای چیدمان کنار هم */
+       width: 1500px;
+       max-width: 100%;
+       height: auto;
+       margin: auto;
+       justify-content: center;
+       align-items: center;
+       }
+       
+       .box {
+       border: 1px solid #ddd; /* کادر دور باکس */
+       padding: 10px; /* فاصله داخلی باکس */
+       margin: 5px; /* فاصله بین باکسها */
+       margin-top: 100px;
+       }
+       
+       
+       
+       .languages-title {
+       flex-basis: 100%; /* تنظیم عرض باکس عنوان به تمام عرض */
+       text-align: center; /* مرکز کردن متن */
+       background: #7562e0;
+       margin-left: 80px;
+       }
+       
+       .languages-info {
+       flex-basis: 33.3333%; /* تنظیم عرض هر باکس اطلاعات به یک سوم */
+       text-align: center; /* مرکز کردن متن */
+       }
 
+       .languages-title h2{
+              color: #ddd;
+       }
 
-
-
-
-
-
-@media screen and (max-width:700px) {
-    .navbar {
-        transform: translateX(-100%);
-    
-}
-.menu-icon{
-    display:block;
-    background:block;
-    position: absolute;
-    top:20px;
-    right:20px;
-    width: 20px;
-    height: 20px;
-}
-.name{
-    position:relative;
-    margin-top: 0px;
-    margin-left: 0px;
-    z-index: -10;
-    
-}
-.comprehensive{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-    
-}
-.intro{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.gmail{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.skype{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.h2{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.Education{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.Experience{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.Skills{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.Research{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.text-primary{
-    display:none;
-    z-index: -10;
-}
-.Honors{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.References{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.hr2{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.hr1{
-    position:relative;
-    margin-left: 0px;
-    z-index: -10;
-}
-.bars{
-    display: block;
-    position: fixed;
-    margin-top:-50px;
-    margin-left: 600px;
-    width: 20px;
-    height: 20px;
-    
-}
-.navbar{
-    position: fixed;
-    margin-top: -50px;
-}
-.fa{
-
-    position: fixed;
-    margin-left: 550px;
-    margin-top: -45px;
-    width: 20px;
-    height: 400px;
-}
-
-.bars1 {
-    position: fixed;
-    margin-left: auto;
-    margin-top: -75px;
-    opacity:1;
-    visibility:visible;
-    display: inline-block;
-}
-.bars1 ul{
-    opacity:1;
-    visibility:visible;
-    
-}
-
-
-.bars1 i ul li:hover a{
-    background: rgb(0, 255, 217);
-    
-}
-.bars1 ul li {
-    display: inline-block;
-    padding: 1px ;
-    font-size: 10px;
-    
-}
-.bars1 ul li:hover a{
-    background: rgb(0, 255, 217);
-}
-.nav-linkb{
-    letter-spacing: 0;
-    
-}
-.nav-linkb:hover,
-.nav-linkb:active {
-  letter-spacing: 3px;
-}
-.nav-linkb:after,
-.nav-linkb:before {
-  backface-visibility: hidden;
-  border: 1px solid rgba(#ffffff, 0);
-  bottom: 0px;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-  width: 0;
-}
-.nav-linkb:hover:after,
-.nav-linkb:hover:before {
-  backface-visibility: hidden;
-  border-color: #fff;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-}
-.nav-linkb:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
-}
-.navbar-toggler{
-    z-index: 10;
-}
-}
+       .submenu {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 140px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+              padding: 10px 0;
+              border-radius: 5px;
+          }
+          
+          /* استایل هنگام hover کردن بر روی آیتم li */
+          li:hover .submenu {
+              display: block;
+          }
+          
+          /* استایل برای آیتم‌های زیر منو */
+          .submenu li {
+              color: #333;
+              padding: 8px 12px;
+              text-decoration: none;
+              display: block;
+          }
+          
+          /* استایل هنگام hover کردن بر روی آیتم‌های زیر منو */
+          .submenu li:hover {
+              background-color: #ddd;
+              border-radius: 5px;
+          }
 
 
 
