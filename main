@@ -1,0 +1,59 @@
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+slides[slideIndex-1].style.display = "block";
+}
+
+const sentence = "Majid Najafi"
+const sentenceElement = 
+document.getElementById("sentence");
+let index = 0;
+function showLetter(){
+    if(index<sentence.length){
+        sentenceElement.textContent +=
+        sentence[index];
+        index ++;
+    
+        setTimeout(showLetter, 200);
+    }
+}
+showLetter();
+
+
+// تابع برای بررسی موقعیت اسکرول و اضافه کردن کلاس انیمیشن
+// function checkSlide() {
+    // const boxes = document.querySelectorAll('.experience-box');
+    // boxes.forEach(box => {
+    // نصف ارتفاع باکس
+    // const slideInAt = (window.scrollY + window.innerHeight) - box.offsetHeight / 2;
+    // پایین باکس
+    // const boxBottom = box.offsetTop + box.offsetHeight;
+    // const isHalfShown = slideInAt > box.offsetTop;
+    // const isNotScrolledPast = window.scrollY < boxBottom;
+    // if (isHalfShown && isNotScrolledPast) {
+    // box.classList.add('slide-in');
+    // } else {
+    // box.classList.remove('slide-in');
+    // }
+    // });
+    // }
+    
+    // اضافه کردن رویداد اسکرول به window
+    // window.addEventListener('scroll', checkSlide);
+    
+
+    
