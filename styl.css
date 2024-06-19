@@ -495,14 +495,14 @@ header{
 .image-container {
        display: flex;
        justify-content: center;
-       gap: 40px; /* فاصله بین تصاویر */
+       gap: 10px; /* فاصله بین تصاویر */
        }
        
-       .image-container img {
-       max-width: 100px;
-       height: auto; /* برای حفظ نسبت تصاویر */
-       margin: auto;
-       }
+.image-container img {
+max-width: 100px;
+height: auto; /* برای حفظ نسبت تصاویر */
+margin: auto;
+}
 
 
        
@@ -975,6 +975,7 @@ header{
        max-width: 100%;
        margin: auto;
        overflow: hidden;
+       width: 300px;
 
    }
 
