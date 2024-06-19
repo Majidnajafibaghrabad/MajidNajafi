@@ -226,6 +226,7 @@ header{
        flex-direction: column;
        gap: 1.2rem;
        font-size: 1.2rem;
+       z-index: 2;
 }
 
 .header__socials a {
@@ -788,7 +789,7 @@ header{
      }
 
      .header__image{
-       bottom: -1rem;
+       /* bottom: -1rem; */
        width: 100%;
      }
 
@@ -798,7 +799,7 @@ header{
 
 
      .header__socials a{
-       color: var(--color-primery);
+       color: #515151;
      }
      
      .submenu {
@@ -919,13 +920,16 @@ header{
               overflow: hidden;
 
           }
-          .image-container img{
-              max-width: 100%;
-              margin: auto;
-              overflow: hidden;
+       .image-container img{
+       max-width: 100%;
+       margin: auto;
+       overflow: hidden;
 
-          }
-
+       }
+       .header__socials a {
+       color: #515151;
+       transition: all 400ms ease;
+       }
        }
        .submenu {
        display: none;
@@ -965,10 +969,13 @@ header{
        width: 300px;
        max-width: 100%;
        height: auto;
+
    }
    .image-container img{
        max-width: 100%;
        margin: auto;
+       overflow: hidden;
+
    }
 
    
