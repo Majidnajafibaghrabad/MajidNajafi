@@ -276,7 +276,7 @@ header{
        
        .education-section h2 {
        font-size: 2em;
-       text-decoration: underline;
+       /* text-decoration: underline; */
        margin-top: 130px;
        color: var(--color-primery);
        }
@@ -913,7 +913,16 @@ header{
               color: var(--color-white);
 
        }
+       .video-container {
+              width: 100%;
+              max-width: 100%;
+              overflow: hidden;
 
+          }
+          .image-container img{
+              max-width: 100%;
+              margin: auto;
+          }
 
        }
        .submenu {
