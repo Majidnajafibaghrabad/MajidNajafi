@@ -897,7 +897,7 @@ header{
 
        .header__image{
               position: relative;
-              top: -1rem;
+              top: 2rem;
        }
 
        .header__right-bg{
